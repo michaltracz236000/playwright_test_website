@@ -8,7 +8,7 @@ def test_decline_cookies(page: Page):
     time.sleep(1)
     expect(page.get_by_text("Odrzuć")).to_be_hidden()
 
-def test_choose_tyre_size(page: Page):
+def test_choose_tyre_size1(page: Page):
     page.goto("https://www.oponeo.pl")
     page.locator("#consentsBar > div > div > span.reject.button.primary.md.solid").click()
     time.sleep(1)
@@ -21,6 +21,48 @@ def test_choose_tyre_size(page: Page):
     expect(page.locator("#_carTires_ctTS_ddlDimWidth")).to_have_value("215")
     expect(page.locator("#_carTires_ctTS_ddlDimRatio")).to_have_value("55")
     expect(page.locator("#_carTires_ctTS_ddlDimDiameter")).to_have_value("17")
+
+def test_choose_tyre_size2(page: Page):
+    page.goto("https://www.oponeo.pl")
+    page.locator("#consentsBar > div > div > span.reject.button.primary.md.solid").click()
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimWidth").select_option("185")
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimRatio").select_option("70")
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimDiameter").select_option("15")
+    time.sleep(1)
+    expect(page.locator("#_carTires_ctTS_ddlDimWidth")).to_have_value("185")
+    expect(page.locator("#_carTires_ctTS_ddlDimRatio")).to_have_value("70")
+    expect(page.locator("#_carTires_ctTS_ddlDimDiameter")).to_have_value("15")
+
+def test_choose_tyre_size3(page: Page):
+    page.goto("https://www.oponeo.pl")
+    page.locator("#consentsBar > div > div > span.reject.button.primary.md.solid").click()
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimWidth").select_option("245")
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimRatio").select_option("45")
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimDiameter").select_option("17")
+    time.sleep(1)
+    expect(page.locator("#_carTires_ctTS_ddlDimWidth")).to_have_value("245")
+    expect(page.locator("#_carTires_ctTS_ddlDimRatio")).to_have_value("45")
+    expect(page.locator("#_carTires_ctTS_ddlDimDiameter")).to_have_value("17")
+
+def test_choose_tyre_size4(page: Page):
+    page.goto("https://www.oponeo.pl")
+    page.locator("#consentsBar > div > div > span.reject.button.primary.md.solid").click()
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimWidth").select_option("275")
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimRatio").select_option("65")
+    time.sleep(1)
+    page.locator("#_carTires_ctTS_ddlDimDiameter").select_option("20")
+    time.sleep(1)
+    expect(page.locator("#_carTires_ctTS_ddlDimWidth")).to_have_value("275")
+    expect(page.locator("#_carTires_ctTS_ddlDimRatio")).to_have_value("65")
+    expect(page.locator("#_carTires_ctTS_ddlDimDiameter")).to_have_value("20")
     
 def test_choose_tyre_type1(page: Page):
     page.goto("https://www.oponeo.pl")
