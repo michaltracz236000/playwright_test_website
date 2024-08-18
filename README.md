@@ -1,4 +1,4 @@
-A project in which one of the websites was tested with the help of the playwright library
+<b>A project in which one of the websites was tested with the help of the playwright library<b/>
 
 Using playwright tested
 Selection of specific product parameters
